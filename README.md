@@ -1,6 +1,7 @@
 # Grails 6.0.0 i18n Integration Test Example
 
-An example Grails 6 project to demonstrate a bug with i18n messages not being resolved during the execution of integration tests.
+An example [Grails 6](https://grails.org/index.html) project to demonstrate a bug with i18n messages not being resolved during the execution of integration tests.
+However, I have not yet been able to reproduce the bug in this example project.
 
 ## Running
 
