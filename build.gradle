@@ -7,7 +7,8 @@ plugins {
     id "idea" 
     id "com.bertramlabs.asset-pipeline" 
     id "application" 
-    id "eclipse" 
+    id "eclipse"
+    id "org.grails.plugins.views-json"
 }
 
 version "0.1"
@@ -49,6 +50,10 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-logging")
     implementation("org.springframework.boot:spring-boot-starter-tomcat")
     implementation("org.springframework.boot:spring-boot-starter-validation")
+
+
+    implementation("org.grails.plugins:views-json")
+
     compileOnly("io.micronaut:micronaut-inject-groovy")
     console("org.grails:grails-console")
     runtimeOnly("com.bertramlabs.plugins:asset-pipeline-grails:4.3.0")

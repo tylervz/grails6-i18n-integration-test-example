@@ -72,6 +72,23 @@ class HelloworldSpec extends Specification {
         json.message == "Next"
     }
 
+    void "test /Example/useJsonViews"() {
+        given: "we build a URI for the controller useJsonViews method"
+        String uri = UriBuilder.of('/Example/useJsonViews')
+                .build()
+
+        when: "we call the method being tested"
+        HttpRequest request = HttpRequest.GET(uri)
+        HttpResponse<String> resp = this.client.toBlocking().exchange(request, String)
+        Map json = new JsonSlurper().parseText(resp.body()) as Map
+
+        then: "we get a success status and a message retrieved from an i18n file"
+        resp.status == HttpStatus.OK
+        json != null
+        json.importantMessage != null
+        json.importantMessage == "Next"
+    }
+
     // void "test something"() {
     //     when:"The home page is visited"
     //         go '/'

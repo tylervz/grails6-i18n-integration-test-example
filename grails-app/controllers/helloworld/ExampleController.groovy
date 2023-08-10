@@ -21,4 +21,11 @@ class ExampleController {
             [].toArray(), LocaleContextHolder.locale)
         render([message: message] as JSON)
     }
+
+    def useJsonViews() {
+        String message = messageSource.getMessage("default.paginate.next",
+                [].toArray(), LocaleContextHolder.locale)
+        Map results = [message: message]
+        respond results
+    }
 }
