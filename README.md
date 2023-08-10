@@ -1,23 +1,20 @@
-## Grails 6.0.0 Documentation
+# Grails 6.0.0 i18n Integration Test Example
 
-- [User Guide](https://docs.grails.org/6.0.0/guide/index.html)
-- [API Reference](https://docs.grails.org/6.0.0/api/index.html)
-- [Grails Guides](https://guides.grails.org/index.html)
----
+An example Grails 6 project to demonstrate a bug with i18n messages not being resolved during the execution of integration tests.
 
-## Feature geb documentation
+## Running
 
-- [Grails Geb Functional Testing for Grails documentation](https://github.com/grails3-plugins/geb#readme)
+Dependencies:
+* JDK 11
 
-- [https://www.gebish.org/manual/current/](https://www.gebish.org/manual/current/)
+To run the application, run `./gradlew bootRun`.
 
-## Feature scaffolding documentation
+To run the integration tests, run `./gradlew bootRun`.
 
-- [Grails Scaffolding Plugin documentation](https://grails.github.io/scaffolding/latest/groovydoc/)
+## Details
 
-- [https://grails-fields-plugin.github.io/grails-fields/latest/guide/index.html](https://grails-fields-plugin.github.io/grails-fields/latest/guide/index.html)
+This Grails 6.0.0 application was created with the command `grails create-app helloworld`.
 
-## Feature asset-pipeline-grails documentation
-
-- [Grails Asset Pipeline Core documentation](https://www.asset-pipeline.com/manual/)
-
+Then I added the [ExampleController](/grails-app/controllers/helloworld/ExampleController.groovy),
+[ExampleService](/grails-app/services/helloworld/ExampleService.groovy), and added more test cases to
+the integration test file [HelloworldSpec](/src/integration-test/groovy/helloworld/HelloworldSpec.groovy).
